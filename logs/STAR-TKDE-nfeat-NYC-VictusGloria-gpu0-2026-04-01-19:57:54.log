@@ -1,0 +1,17 @@
+2026-04-01 19:57:54 INFO     Namespace(cuda='0', data='NYC', min_seq_len=8, max_seq_len=24, method='STAR-TKDE', train_ratio=0.7, val_ratio=0.1, test_ratio=0.2, eigen_dim=32, ratio=0.005, eigen=False, num_locs=1500, device=device(type='cuda', index=0), hostname='VictusGloria', cwd='/home/gloria/tfg', datapath='/home/gloria/tfg/gen-val-data/tra0.7-val0.1-test0.2/min_len_8/NYC', propath='saved_data/NYC')
+2026-04-01 19:57:55 INFO     save ttg_all.npz in saved_data/NYC
+2026-04-01 19:57:55 INFO     save ttg.npz in saved_data/NYC
+2026-04-01 19:57:55 INFO     Sparsity of ttg: 0.00467
+2026-04-01 19:57:58 INFO     save sdg.npz in saved_data/NYC
+2026-04-01 19:57:58 INFO     Sparsity of sdg: 0.00467
+2026-04-01 19:58:52 INFO     save stg.npz in saved_data/NYC
+2026-04-01 19:58:52 INFO     Sparsity of stg: 0.00467
+2026-04-01 19:58:52 INFO     eigen_vectors done.
+2026-04-01 19:58:52 INFO     save nodes and edges.
+2026-04-01 19:58:52 INFO     save files done.
+2026-04-01 19:58:52 INFO     eigen_vectors done.
+2026-04-01 19:58:52 INFO     save nodes and edges.
+2026-04-01 19:58:52 INFO     save files done.
+2026-04-01 19:58:52 INFO     eigen_vectors done.
+2026-04-01 19:58:53 INFO     save nodes and edges.
+2026-04-01 19:58:53 INFO     save files done.

@@ -1,0 +1,16 @@
+2026-04-03 11:49:45 INFO     Namespace(cuda='0', data='NYC', min_seq_len=8, max_seq_len=24, method='STAR-TKDE', train_ratio=0.7, val_ratio=0.1, test_ratio=0.2, eigen_dim=32, ratio=0.005, eigen=False, num_locs=1500, device=device(type='cuda', index=0), hostname='VictusGloria', cwd='/home/gloria/tfg/mobility-predictor', datapath='/home/gloria/tfg/mobility-predictor/data/processed/tra0.7-val0.1-test0.2/min_len_8/NYC', propath='/home/gloria/tfg/mobility-predictor/data/graphs/NYC')
+2026-04-03 11:49:45 INFO     load temporal transition graph...
+2026-04-03 11:49:45 INFO     Sparsity of ttg: 0.00467
+2026-04-03 11:49:45 INFO     load spatial distance graph...
+2026-04-03 11:49:45 INFO     Sparsity of sdg: 0.00467
+2026-04-03 11:49:45 INFO     load spatiotemporal graph...
+2026-04-03 11:49:45 INFO     Sparsity of stg: 0.00467
+2026-04-03 11:49:45 INFO     eigen_vectors done.
+2026-04-03 11:49:45 INFO     save nodes and edges.
+2026-04-03 11:49:45 INFO     save files done.
+2026-04-03 11:49:45 INFO     eigen_vectors done.
+2026-04-03 11:49:45 INFO     save nodes and edges.
+2026-04-03 11:49:45 INFO     save files done.
+2026-04-03 11:49:45 INFO     eigen_vectors done.
+2026-04-03 11:49:45 INFO     save nodes and edges.
+2026-04-03 11:49:45 INFO     save files done.
