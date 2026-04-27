@@ -1,0 +1,93 @@
+nohup: ignoring input
+DGL backend not selected or invalid.  Assuming PyTorch for now.
+/usr/local/lib/python3.11/dist-packages/torch/nn/modules/conv.py:459: UserWarning: Applied workaround for CuDNN issue, install nvrtc.so (Triggered internally at ../aten/src/ATen/native/cudnn/Conv_v8.cpp:80.)
+  return F.conv2d(input, weight, bias, self.stride,
+Setting the default backend to "pytorch". You can change it in the ~/.dgl/config.json file or export the DGLBACKEND environment variable.  Valid options are: pytorch, mxnet, tensorflow (all lowercase)
+Cargando datos de flujo...
+  Shape: (720, 3225)
+  Fechas: 2025-09-01 00:00:00 → 2025-09-30 23:00:00
+
+Split temporal:
+  Train: 503 pasos (2025-09-01 00:00:00 → 2025-09-21 22:00:00)
+  Val:   72 pasos (2025-09-21 23:00:00 → 2025-09-24 22:00:00)
+  Test:  145 pasos (2025-09-24 23:00:00 → 2025-09-30 23:00:00)
+
+Normalizando...
+  Media train: 60.4116, Std train: 154.4479
+
+Ventanas deslizantes:
+  Train: 264 muestras
+  Val:   72 muestras
+  Test:  145 muestras
+
+Cargando grafos y modelo...
+  STAREmbedding inicializado (entrenamiento end-to-end).
+  GraphWaveNet inicializado.
+
+Parámetros del modelo:
+  STAREmbedding: 125,664 parámetros
+  GraphWaveNet:  417,916 parámetros
+  Total:         543,580 parámetros entrenables
+
+Entrenando durante 100 épocas...
+  Horizonte: 72 días
+  Early stopping: 15 épocas sin mejora
+------------------------------------------------------------
+Época   1/100 | Train Loss: 0.1792 | Val MAE: 25.0874 | Val RMSE: 114.4309 | Val MAPE: 4831996.88% | 203.9s
+  → Mejor modelo guardado (Val MAE: 25.0874)
+Época   2/100 | Train Loss: 0.1558 | Val MAE: 24.2908 | Val RMSE: 114.2502 | Val MAPE: 4500891.89% | 201.6s
+  → Mejor modelo guardado (Val MAE: 24.2908)
+Época   3/100 | Train Loss: 0.1495 | Val MAE: 25.4024 | Val RMSE: 115.2405 | Val MAPE: 2772832.22% | 197.9s
+Época   4/100 | Train Loss: 0.1432 | Val MAE: 23.0334 | Val RMSE: 113.7448 | Val MAPE: 2964885.11% | 202.5s
+  → Mejor modelo guardado (Val MAE: 23.0334)
+Época   5/100 | Train Loss: 0.1408 | Val MAE: 23.2674 | Val RMSE: 113.3158 | Val MAPE: 3227257.92% | 201.8s
+Época   6/100 | Train Loss: 0.1385 | Val MAE: 22.3192 | Val RMSE: 113.5696 | Val MAPE: 2916897.89% | 200.5s
+  → Mejor modelo guardado (Val MAE: 22.3192)
+Época   7/100 | Train Loss: 0.1367 | Val MAE: 24.1348 | Val RMSE: 113.1148 | Val MAPE: 2973434.69% | 201.1s
+Época   8/100 | Train Loss: 0.1358 | Val MAE: 22.0653 | Val RMSE: 113.0098 | Val MAPE: 2314089.31% | 201.5s
+  → Mejor modelo guardado (Val MAE: 22.0653)
+Época   9/100 | Train Loss: 0.1349 | Val MAE: 22.9654 | Val RMSE: 113.6900 | Val MAPE: 2359527.78% | 210.4s
+Época  10/100 | Train Loss: 0.1339 | Val MAE: 23.5662 | Val RMSE: 113.3925 | Val MAPE: 3305375.88% | 230.5s
+Época  11/100 | Train Loss: 0.1332 | Val MAE: 22.0111 | Val RMSE: 113.4533 | Val MAPE: 1895681.00% | 233.4s
+  → Mejor modelo guardado (Val MAE: 22.0111)
+Época  12/100 | Train Loss: 0.1325 | Val MAE: 23.0733 | Val RMSE: 113.8755 | Val MAPE: 2319650.14% | 234.5s
+Época  13/100 | Train Loss: 0.1319 | Val MAE: 23.2354 | Val RMSE: 112.8667 | Val MAPE: 3352209.93% | 252.2s
+Época  14/100 | Train Loss: 0.1318 | Val MAE: 22.5915 | Val RMSE: 113.7689 | Val MAPE: 2459390.90% | 234.3s
+Época  15/100 | Train Loss: 0.1313 | Val MAE: 21.7596 | Val RMSE: 112.7669 | Val MAPE: 2452359.62% | 205.1s
+  → Mejor modelo guardado (Val MAE: 21.7596)
+Época  16/100 | Train Loss: 0.1302 | Val MAE: 22.6614 | Val RMSE: 113.5186 | Val MAPE: 2516213.97% | 204.9s
+Época  17/100 | Train Loss: 0.1299 | Val MAE: 21.2297 | Val RMSE: 112.9034 | Val MAPE: 1835583.90% | 206.0s
+  → Mejor modelo guardado (Val MAE: 21.2297)
+Época  18/100 | Train Loss: 0.1296 | Val MAE: 23.2304 | Val RMSE: 114.1456 | Val MAPE: 2043895.72% | 205.0s
+Época  19/100 | Train Loss: 0.1294 | Val MAE: 29.1299 | Val RMSE: 114.6752 | Val MAPE: 5316785.64% | 219.7s
+Época  20/100 | Train Loss: 0.1297 | Val MAE: 22.7265 | Val RMSE: 113.7981 | Val MAPE: 2165874.94% | 219.8s
+Época  21/100 | Train Loss: 0.1290 | Val MAE: 26.8852 | Val RMSE: 114.2526 | Val MAPE: 3817410.64% | 221.4s
+Época  22/100 | Train Loss: 0.1285 | Val MAE: 22.3194 | Val RMSE: 112.6888 | Val MAPE: 2636593.89% | 209.0s
+Época  23/100 | Train Loss: 0.1288 | Val MAE: 22.8124 | Val RMSE: 113.7674 | Val MAPE: 2382313.43% | 245.3s
+Época  24/100 | Train Loss: 0.1282 | Val MAE: 21.0846 | Val RMSE: 112.7014 | Val MAPE: 1863120.65% | 240.3s
+  → Mejor modelo guardado (Val MAE: 21.0846)
+Época  25/100 | Train Loss: 0.1279 | Val MAE: 21.6027 | Val RMSE: 113.1098 | Val MAPE: 1798399.89% | 241.8s
+Época  26/100 | Train Loss: 0.1279 | Val MAE: 22.5990 | Val RMSE: 113.1230 | Val MAPE: 2349829.92% | 231.4s
+Época  27/100 | Train Loss: 0.1276 | Val MAE: 22.3127 | Val RMSE: 112.7222 | Val MAPE: 2335654.00% | 211.3s
+Época  28/100 | Train Loss: 0.1274 | Val MAE: 23.1541 | Val RMSE: 114.0316 | Val MAPE: 2121755.39% | 260.5s
+Época  29/100 | Train Loss: 0.1274 | Val MAE: 22.8601 | Val RMSE: 113.3949 | Val MAPE: 2164953.71% | 300.0s
+Época  30/100 | Train Loss: 0.1272 | Val MAE: 22.0765 | Val RMSE: 113.3991 | Val MAPE: 1565614.01% | 302.1s
+Época  31/100 | Train Loss: 0.1274 | Val MAE: 21.4479 | Val RMSE: 112.5977 | Val MAPE: 2287362.59% | 298.8s
+Época  32/100 | Train Loss: 0.1270 | Val MAE: 27.3809 | Val RMSE: 114.2044 | Val MAPE: 4279830.67% | 295.7s
+Época  33/100 | Train Loss: 0.1271 | Val MAE: 22.5466 | Val RMSE: 112.8783 | Val MAPE: 2442674.08% | 294.1s
+Época  34/100 | Train Loss: 0.1268 | Val MAE: 21.5124 | Val RMSE: 112.5810 | Val MAPE: 1907739.08% | 294.6s
+Época  35/100 | Train Loss: 0.1268 | Val MAE: 22.7033 | Val RMSE: 112.8579 | Val MAPE: 2134886.33% | 292.9s
+Época  36/100 | Train Loss: 0.1268 | Val MAE: 23.3378 | Val RMSE: 113.1652 | Val MAPE: 2344471.90% | 298.1s
+Época  37/100 | Train Loss: 0.1267 | Val MAE: 23.7640 | Val RMSE: 114.1776 | Val MAPE: 2178621.68% | 224.5s
+Época  38/100 | Train Loss: 0.1266 | Val MAE: 23.2115 | Val RMSE: 113.9894 | Val MAPE: 2190066.42% | 199.9s
+Época  39/100 | Train Loss: 0.1264 | Val MAE: 22.2572 | Val RMSE: 112.9996 | Val MAPE: 2114635.99% | 199.9s
+
+Early stopping en época 39.
+
+Evaluando en test con mejor modelo...
+------------------------------------------------------------
+Resultados finales en test (horizonte 72 días):
+  MAE:  21.8494
+  RMSE: 151.5844
+  MAPE: 4915977.34%
+------------------------------------------------------------

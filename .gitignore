@@ -3,6 +3,10 @@ data/raw/
 data/processed/
 data/graphs/
 
+# --- Imagenes ------------------------------
+analysis/imgs
+analysis/taptap/imgs
+
 # ── Modelos y checkpoints ─────────────────────────────────────────────────────
 checkpoints/
 *.pt
