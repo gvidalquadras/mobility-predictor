@@ -29,7 +29,7 @@ import time
 
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
-from config import DATA_CONFIG, DATA, STAR, GWN, TRAIN
+from config import DATA_CONFIG, DATA, STAR, GWN, TRAIN, USE_STAR
 from model.full_model import FullModel, load_supports
 
 
@@ -221,10 +221,12 @@ def main():
     print("\nCargando grafos y modelo...")
     supports = load_supports(DATA_CONFIG["graphs_dir"], device=str(device))
 
+    print(f"\nModo: {'STAR + GWN (completo)' if USE_STAR else 'GWN-only (ablación)'}")
     model = FullModel(
         propath           = DATA_CONFIG["graphs_dir"],
         supports          = supports,
         device            = str(device),
+        use_star          = USE_STAR,
         fea_dim           = STAR["fea_dim"],
         hid_dim           = STAR["hid_dim"],
         out_dim_emb       = STAR["out_dim"],
@@ -263,9 +265,10 @@ def main():
 
     best_val_mae  = float("inf")
     patience_cnt  = 0
+    model_suffix    = "" if USE_STAR else "_gwn_only"
     best_model_path = os.path.join(
         DATA_CONFIG["output_dir"],
-        f"best_model_h{horizon}.pt"
+        f"best_model_h{horizon}{model_suffix}.pt"
     )
 
     for epoch in range(1, TRAIN["epochs"] + 1):
